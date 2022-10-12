@@ -44,7 +44,7 @@ jobs:
         with:
           push: true
           context: ./api_yamdb/
-          tags: knivnia/api_yamdb:latest
+          tags: knivnia/yamdb_final:latest
 
   deploy:
     name: Deploy to Yandex.Cloud machine
