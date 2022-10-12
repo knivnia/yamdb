@@ -1,4 +1,4 @@
-https://github.com/loverazz/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg
+https://github.com/loverazz/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg?event=push
 
 # Yamdb API
 
