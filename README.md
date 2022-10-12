@@ -1,8 +1,8 @@
 ![example event parameter](https://github.com/loverazz/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg?event=push)
 
-# Yamdb API
+# YaMDb API
 
-### Yamdb - reviews resource
+### YaMDb - reviews resource
 
 ##### Description
 
