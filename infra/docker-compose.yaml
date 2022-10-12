@@ -9,7 +9,7 @@ services:
       - ./.env
 
   web:
-    image: knivnia/yamdb_final:latest
+    image: knivnia/api_yamdb:latest
     build: ../api_yamdb/
     restart: always
     volumes:
