@@ -15,8 +15,8 @@ from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import AccessToken
 from reviews.models import Genre, Review, Title, Сategory
 from users.models import User
-from . import permissions, serializers
 
+from . import permissions, serializers
 from .filters import TitleFilter
 from .mixins import CreateListDestroyViewSet
 
