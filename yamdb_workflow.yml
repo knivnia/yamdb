@@ -61,8 +61,8 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
-            sudo docker-compose down -v
             cd yamdb_final/
+            sudo docker-compose down -v
             sudo docker rmi $(docker images 'knivnia/yamdb_final:latest' -a -q)
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_final:latest
             sudo docker-compose stop
