@@ -44,7 +44,7 @@ jobs:
         with:
           push: true
           context: ./api_yamdb/
-          tags: knivnia/yamdb_final:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/yamdb_final:latest
 
   deploy:
     name: Deploy to Yandex.Cloud machine
@@ -59,7 +59,9 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
-            sudo docker pull knivnia/yamdb_final
+            cd yamdb_final/
+            rm -r app/
+            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_final:latest
             sudo docker-compose stop
             sudo docker-compose rm web
             touch .env
