@@ -62,6 +62,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             cd yamdb_final/
+            sudo docker rmi $(docker images 'knivnia/yamdb_final:latest' -a -q)
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_final:latest
             sudo docker-compose stop
             sudo docker-compose rm web
@@ -90,4 +91,3 @@ jobs:
           Commited by ${{ github.actor }},
           Comment "${{ github.event.commits[0].message }}" 
           Link https://github.com/${{ github.repository }}/commit/${{ github.sha }}
-          <a href="https://github.com/${{github.repository}}/commit/${{github.sha}}">Hyperlink</a>
