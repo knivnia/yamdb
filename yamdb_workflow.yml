@@ -84,4 +84,9 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        message: ${{ github.repository }} - ${{ github.workflow }} run is successful! Commited by ${{ github.actor }}, comment "${{ github.event.commits[0].message }}" link https://github.com/${{ github.repository }}/commit/${{github.sha}}
+        message: |
+          ${{ github.workflow }} run is successful!
+          Repository ${{ github.repository }}
+          Commited by ${{ github.actor }},
+          Comment "${{ github.event.commits[0].message }}" 
+          Link https://github.com/${{ github.repository }}/commit/${{github.sha}}
