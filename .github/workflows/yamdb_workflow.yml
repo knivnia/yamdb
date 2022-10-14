@@ -62,11 +62,10 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             cd yamdb_final/
-            sudo docker-compose down -v
-            sudo docker rmi $(docker images 'knivnia/yamdb_final:latest' -a -q)
-            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_final:latest
             sudo docker-compose stop
-            sudo docker-compose rm web
+            sudo docker container rm loverazz_web_1
+            sudo docker rmi $(sudo docker images ${{ secrets.DOCKER_USERNAME }}/yamdb_final:latest -a -q)
+            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_final
             touch .env
             echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
             echo DB_NAME=${{ secrets.DB_NAME }} >> .env
