@@ -89,5 +89,5 @@ jobs:
           Repository ${{ github.repository }}
           Commited by ${{ github.actor }},
           Comment "${{ github.event.commits[0].message }}" 
-          Link https://github.com/${{ github.repository }}/commit/${{github.sha}}
-          <a href="https://github.com/${{ github.repository }}/commit/${{github.sha}}">Hyperlink</a>
+          Link https://github.com/${{ github.repository }}/commit/${{ github.sha }}
+          <a href="https://github.com/${{github.repository}}/commit/${{github.sha}}">Hyperlink</a>
